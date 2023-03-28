@@ -1,0 +1,27 @@
+spring:  
+  application: 
+    name: patientModule/dev
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/patientmodule
+    username: ${username}
+    password: ${password}
+#    username: root
+#    password: root
+  security:
+    user:
+      name: user
+      password: pass
+      
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true 
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        naming:
+          physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    
+data: welcomehome
+secret: patientModule
